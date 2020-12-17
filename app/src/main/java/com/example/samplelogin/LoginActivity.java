@@ -34,10 +34,13 @@ public class LoginActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 boolean checkuserpass=db.checkuserpass(name,password);
-                if (checkuserpass==true)
+                if (checkuserpass==true) {
                     Toast.makeText(getApplicationContext(), "login successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                }
                 else
-                    Toast.makeText(getApplicationContext(), "wrong email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "wrong name or password", Toast.LENGTH_SHORT).show();
 
               /*  if (email.equals("") || password.equals(""))
                     Toast.makeText(LoginActivity.this, "Enter All the field", Toast.LENGTH_SHORT).show();

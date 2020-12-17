@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".HomeActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="welcome HomeActivity"
+        android:textSize="45sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

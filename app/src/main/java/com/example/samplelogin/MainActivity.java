@@ -42,15 +42,43 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = db.insertData
-                        (editTextName.getText().toString(),
-                        editTextMonumber.getText().toString(),
-                        editTexEmail.getText().toString(),
-                        editTextPassword.getText().toString());
-                if (isInserted = true)
-                    Toast.makeText(MainActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(MainActivity.this, "REgistration failed", Toast.LENGTH_SHORT).show();
+               boolean invalid=false;
+
+                if (editTextName.getText().toString().equals("")){
+                    invalid=true;
+                    Toast.makeText(getApplicationContext(), "you must entered name", Toast.LENGTH_SHORT).show();
+
+                }else if (editTextMonumber.getText().toString().equals("")){
+                    invalid=true;
+                    Toast.makeText(getApplicationContext(), "Mobile Number is Required", Toast.LENGTH_SHORT).show();
+
+                }else if (editTexEmail.getText().toString().equals("")){
+                    invalid=true;
+                    Toast.makeText(getApplicationContext(), "Enter Valid Email", Toast.LENGTH_SHORT).show();
+
+                }else if (editTextPassword.getText().toString().equals("")){
+                    invalid=true;
+                    Toast.makeText(getApplicationContext(), "you must entered password ", Toast.LENGTH_SHORT).show();
+                }
+
+
+                if (invalid ==false){
+                    boolean isInserted = db.insertData
+                            (editTextName.getText().toString(),
+                                    editTextMonumber.getText().toString(),
+                                    editTexEmail.getText().toString(),
+                                       editTextPassword.getText().toString());
+                    if(isInserted==true){
+                        Toast.makeText(MainActivity.this, "Succ Registered", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(MainActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+
+
 
             }
         });
