@@ -60,7 +60,7 @@ public static  final String COL_5 = "PASSWORD";
 
     public boolean checkuserpass(String name, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("Select * from TABLE_NAME where name = ? & password = ?", new String[]{name, password});
+        Cursor cursor = db.rawQuery("Select * from employee_table where name = '"+name+"' & password = '"+password+"'");
         if (cursor.getCount() > 0)
             return true;
         else
