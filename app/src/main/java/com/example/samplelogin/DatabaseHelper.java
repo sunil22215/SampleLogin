@@ -64,6 +64,7 @@ public static  final String COL_5 = "PASSWORD";
         Cursor cursor = db.rawQuery(query,null);
         if (cursor.getCount() > 0)
             return true;
+
         else
             return false;
     }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,14 +14,15 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="25dp"/>
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="15sp"
+        android:layout_marginRight="25dp"
         android:layout_below="@id/textViewName"
         android:hint="name" />
 
@@ -28,8 +30,9 @@
         android:id="@+id/editTextMoNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="15sp"
         android:layout_below="@id/textViewMoNumber"
         android:hint="Mobile Number" />
 
@@ -37,17 +40,19 @@
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="15sp"
         android:layout_below="@id/textViewEmail"
-        android:hint="Email" />/>
+        android:hint="Email" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="15sp"
         android:layout_below="@id/textViewPassword"
         android:hint="Password" />/>
 
@@ -55,10 +60,14 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/button_bg"
+        android:text="Create Account"
+        app:backgroundTint="#EC4444"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp" />
 
 
     <TextView
@@ -66,43 +75,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="10dp"
         android:text="User already Registered:"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="50dp"
         android:layout_alignBaseline="@id/tvAlreadyReg"
-        android:layout_toRightOf="@id/tvAlreadyReg"
         android:layout_alignParentBottom="true"
-        android:text="Login" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="40dp"
+        android:layout_toRightOf="@id/tvAlreadyReg"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="#EC4444"
+        android:text="Login"
+        app:backgroundTint="#EC4444" />
 
-    <TextView
+   <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:text="Name:"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:text="Name"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textViewMoNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mo Number:"
+        android:text="Mobile Number"
         android:textColor="#FFFFFF"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_below="@id/editTextName"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
 
     <TextView
@@ -110,34 +122,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextMoNumber"
-        android:text="Email:"
+        android:text="Email"
         android:textColor="#FFFFFF"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="20sp" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="15sp" />
 
 
     <TextView
         android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password:"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:text="Password"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_below="@id/editTextEmail"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:text="REGISTER:"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="REGISTER"
         android:textColor="#FFFFFF"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

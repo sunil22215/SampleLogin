@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/purple_200"
     android:orientation="vertical"
     tools:context=".LoginActivity">
@@ -20,19 +21,32 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_below="@id/textViewEmail"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="#FFFFFF"
         android:hint="***********"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewPassword"
         android:layout_marginLeft="35dp"
-        android:textColor="#FFFFFF"
-        android:hint="***********"
-        android:textColorHint="#FFFFFF" />
+        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#FFFFFF"
+        android:layout_marginRight="35dp"
+        android:layout_below="@id/textViewPassword">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_200"
+            android:hint="************"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/buttonLogin"
@@ -43,17 +57,17 @@
         android:layout_marginBottom="100dp"
         android:backgroundTint="@color/purple_200"
         android:text="LOGIN"
-        android:textSize="25sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:text="LOGIN"
         android:textColor="#FFFFFFFF"
-        android:textSize="25sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textViewEmail"
@@ -62,9 +76,9 @@
         android:layout_below="@id/textViewLogin"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="40dp"
-        android:text="Name:"
+        android:text="Name"
         android:textColor="#FFFFFFFF"
-        android:textSize="20sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/textViewPassword"
@@ -73,17 +87,27 @@
         android:layout_below="@id/editTextEmail"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="40dp"
-        android:text="Password:"
+        android:text="Password"
         android:textColor="#FFFFFFFF"
-        android:textSize="20sp" />
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/textViewForgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPassword"
+        android:layout_marginRight="35dp"
+        android:layout_below="@id/textInputLayout"
         android:text="Forgot Password"
         android:textColor="#FFFFFFFF"
         android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/textViewTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="#FFFFFF"
+        android:text="Terms and Condition"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
